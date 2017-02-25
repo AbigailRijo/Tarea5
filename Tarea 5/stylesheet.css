@@ -1,0 +1,80 @@
+body {
+	background-image: url(img/1.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    background-attachment: fixed;
+}
+
+header {
+	background:#FF8000;
+	color: #fff;
+}
+#formulario {
+	margin-top: 10px;
+	padding: 5px;
+	width: 860px;
+	height: 180px;
+	float: left;
+	margin-left: 20px;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.3);
+	border: 1px solid rgba(0,0,0,0.5);
+}
+#tomarFoto {
+	margin-top: 10px;
+	padding: 5px;
+	width: 350px;
+	height: 330px;
+	float: left;
+	margin-left: 65px;
+	border-radius: 6px;
+	max-width: 1000px;
+	max-height: 1000px;
+	background: rgba(255, 255, 255, 0.3);
+	border: 1px solid rgba(0,0,0,0.5);
+
+}
+
+#table1 {
+	overflow: scroll;
+	max-height: 400px;
+	clear: both;
+	margin-top: 10px;                     
+	padding: 30px;
+	width: 1200px;
+	height: 230px;
+	float: left;
+	margin-left: 65px;
+	max-width: 1500px;
+	border-radius: 6px;
+	background: rgba(255, 255, 255, 0.4);	
+	border: 1px solid rgba(0,0,0,0.5);
+}
+
+label {
+	color: #0404B4;
+}
+
+h2{
+	color: #0404B4;
+	margin-left: 300px;
+}
+
+input {
+	margin-left: 10px;
+}
+button {
+	width: 100px;
+	margin-left: 18px;
+}
+button:active {
+	transform: scale(0.90);
+}
+
+h1 {
+	color: #0404B4;
+}
+
+#canvas {
+    display: none;
+}

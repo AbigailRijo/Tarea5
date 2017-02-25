@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+	<title>WebCam</title>
+	<meta name="viewport" content="width-device-width, user=scalable=no, initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+<body>
+<header>
+	<div class="container">
+		<h1>WebCam</h1>
+	</div>
+</header>
+
+<div id="tomarFoto">
+<button id="btnFoto" class="btn btn-primary">Foto</button>
+<button id="startbutton" class="btn btn-primary">Capturar</button>
+<img id="photo" alt="photo">
+<video id="video"></video>
+<canvas id="canvas"></canvas>
+</div>
+<!---->
+<div id="formulario">
+<form class="form-inline">
+		  <h2>Datos personales</h2>
+					<input type="text"  class="form-control" placeholder="Cedula" id="txtCedula">			
+					<input type="text" class="form-control"  placeholder="Nombre" 	id="txtNombre">
+					<input type="text" class="form-control"  placeholder="Apellido" id="txtApellido">
+					<input type="text" class="form-control"  placeholder="Telefono" id="txtTelefono">
+</form>
+<br>
+    <button id="btnGuardar" class="btn btn-primary">Guardar</button>
+	<button id="btnCancelar" class="btn btn-primary">Cancelar</button>
+</div>
+<div class="container" id="table1">
+	<table id="tablaRegistros" class="table table-bordered table-hover">
+	<thead>
+		<th>
+			<label><b>Cedula</b></label>
+		</th>
+		<th>
+		<label><b>Nombre</b></label>
+		</th>
+		<th>
+		<label><b>Apellido</b></label>
+		</th>
+		<th>
+		<label><b>Telefono</b></label>
+		</th>
+		<th>
+		<label><b>Foto</b></label>
+		</th>
+		<th>
+		<label><b>Editar/Eliminar</b></label>
+		</th>
+	</thead>
+	<tbody>
+		
+	</tbody>
+</table>
+</div>
+
+
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="main.js"></script>
+</body>
+</html>

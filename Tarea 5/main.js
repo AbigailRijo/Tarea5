@@ -2,6 +2,7 @@ var foto;
 var btnGuardar = document.getElementById('btnGuardar');
 var btnFoto = document.getElementById('btnFoto');
 var quizasPersonas = localStorage.getItem('persona');
+var photo = document.querySelector('#photo');
 var index;
 var  estado= 1;
 var  video = document.querySelector('#video');
@@ -19,10 +20,9 @@ else {
 LlenarTabla();
 
 function Camara() {
-
   var streaming = false,
       canvas = document.querySelector('#canvas'),
-      photo = document.querySelector('#photo'),
+
       startbutton = document.querySelector('#startbutton'),
       width = 320,
       height = 0;
@@ -55,6 +55,7 @@ function Camara() {
   video.addEventListener('canplay', function(ev){
     if (!streaming) {
       height = video.videoHeight / (video.videoWidth/width);
+         video.hidden = false;
       video.setAttribute('width', width);
       video.setAttribute('height', height);
       canvas.setAttribute('width', width);
@@ -69,7 +70,6 @@ function Camara() {
     canvas.getContext('2d').drawImage(video, 0, 0, width, height);
     var data = canvas.toDataURL('image/png');
     photo.setAttribute('src', data);
-    
     foto = data;
   }
 
@@ -103,7 +103,7 @@ else if(document.querySelector('#txtCedula ').value == "" || document.querySelec
   
 }
 else{
-   video.hidden = true;
+  
   var cedula = document.querySelector('#txtCedula').value;
   var nombre = document.querySelector('#txtNombre').value;
   var apellido= document.querySelector('#txtApellido').value;
@@ -130,7 +130,7 @@ function LlenarTabla() {
 
    tBodyTabla.innerHTML = '';
 
-     video.hidden = false;
+     video.hidden = true;
     
     for (var i = 0; i < personas.length; i++) {
 
@@ -162,27 +162,22 @@ if (personas[i].foto) {
     img.setAttribute('src', personas[i].foto);
     celdaFoto.appendChild(img);
     fila.appendChild(celdaFoto);
-  }
-  else{
-     console.log('entre aqui pendeja');
-      var img = document.createElement('img');
+  }else{
+    console.log('entre aqui pendeja');
+    var img = document.createElement('img');
     img.setAttribute('width','50');
     img.setAttribute('height','50');
     img.setAttribute('src','desconocido.png');
     celdaFoto.appendChild(img);
     fila.appendChild(celdaFoto);
-    }
+  }
 
- fila.appendChild(celdaAction);
-
-    
-      tBodyTabla.appendChild(fila);
-
-      foto = "";
-
-        
+  fila.appendChild(celdaAction);
+  tBodyTabla.appendChild(fila);
+  foto = "";
        }
 document.querySelector("form").reset();
+    photo.removeAttribute('src');
         // LimpiarColumnas();
 }
 
